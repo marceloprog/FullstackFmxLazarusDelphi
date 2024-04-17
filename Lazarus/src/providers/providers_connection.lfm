@@ -1,0 +1,22 @@
+object ProviderConnection: TProviderConnection
+  OldCreateOrder = False
+  Height = 150
+  HorizontalOffset = 502
+  VerticalOffset = 135
+  Width = 150
+  object ZConnection: TZConnection
+    ControlsCodePage = cCP_UTF8
+    AutoEncodeStrings = True
+    Properties.Strings = (
+      'AutoEncodeStrings=True'
+      'controls_cp=CP_UTF8'
+    )
+    Port = 0
+    Database = 'C:\programas\ClubeMobile\bd\Books.FDB'
+    User = 'SYSDBA'
+    Password = 'masterkey'
+    Protocol = 'firebirdd-3.0'
+    Left = 24
+    Top = 21
+  end
+end

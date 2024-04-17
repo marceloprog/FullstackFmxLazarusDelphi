@@ -1,0 +1,59 @@
+object frameLivro: TframeLivro
+  Size.Width = 405.000000000000000000
+  Size.Height = 48.000000000000000000
+  Size.PlatformDefault = False
+  object btnInfo: TSpeedButton
+    Align = Left
+    Padding.Left = 5.000000000000000000
+    Padding.Top = 5.000000000000000000
+    Padding.Right = 5.000000000000000000
+    Padding.Bottom = 5.000000000000000000
+    Margins.Left = 5.000000000000000000
+    Margins.Top = 5.000000000000000000
+    Margins.Right = 5.000000000000000000
+    Margins.Bottom = 5.000000000000000000
+    Position.X = 5.000000000000000000
+    Position.Y = 5.000000000000000000
+    Size.Width = 48.000000000000000000
+    Size.Height = 38.000000000000000000
+    Size.PlatformDefault = False
+    StyleLookup = 'infotoolbutton'
+    OnClick = btnInfoClick
+  end
+  object imgCheck: TPath
+    Align = Right
+    Data.Path = {
+      08000000000000000000A8410000E04001000000000010410000984101000000
+      000060400000584101000000B81E9D40A47041410100000000001041295C8141
+      0100000052B89C4148E1B240010000000000A8410000E040030000000000A841
+      0000E040}
+    Padding.Left = 10.000000000000000000
+    Padding.Top = 10.000000000000000000
+    Padding.Right = 10.000000000000000000
+    Padding.Bottom = 10.000000000000000000
+    Margins.Left = 5.000000000000000000
+    Margins.Top = 10.000000000000000000
+    Margins.Right = 5.000000000000000000
+    Margins.Bottom = 10.000000000000000000
+    Position.X = 370.000000000000000000
+    Position.Y = 10.000000000000000000
+    Size.Width = 30.000000000000000000
+    Size.Height = 28.000000000000000000
+    Size.PlatformDefault = False
+  end
+  object lblNome: TLabel
+    Align = Client
+    StyledSettings = [Family, Style, FontColor]
+    HitTest = True
+    Padding.Left = 10.000000000000000000
+    Padding.Right = 10.000000000000000000
+    Size.Width = 307.000000000000000000
+    Size.Height = 48.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.Font.Size = 16.000000000000000000
+    TextSettings.HorzAlign = Center
+    Text = 'lblNome'
+    TabOrder = 1
+    OnClick = lblNomeClick
+  end
+end

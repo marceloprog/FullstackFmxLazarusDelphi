@@ -1,0 +1,45 @@
+inherited ReservationService: TReservationService
+  Height = 328
+  HorizontalOffset = 540
+  VerticalOffset = 77
+  Width = 373
+  object qryReservationDetalhe: TZQuery[1]
+    Connection = ZConnection
+    SQL.Strings = (
+      'select rl.id,rl.id_livro,rl.id_reserva, l.nome as nomelivro,l.autor,l.descricao,'
+      'r.data,r.nome as nomepessoa,r.cpf,r.email,r.telefone'
+      'from reserva_livro rl'
+      'inner join livro l on l.id=rl.id_livro'
+      'inner join reserva r on r.id=rl.id_reserva'
+      'order by rl.id_reserva,nomepessoa'
+    )
+    Params = <>
+    Left = 108
+    Top = 52
+  end
+  object qryUpdate: TZQuery[2]
+    Connection = ZConnection
+    Params = <>
+    Left = 75
+    Top = 122
+  end
+  object qryID: TZQuery[3]
+    Connection = ZConnection
+    SQL.Strings = (
+      'select max(id) as ultimoid from reserva'
+    )
+    Params = <>
+    Left = 152
+    Top = 128
+  end
+  object qryReservation: TZQuery[4]
+    Connection = ZConnection
+    SQL.Strings = (
+      'select id,data,nome,cpf,email,telefone'
+      'from reserva'
+    )
+    Params = <>
+    Left = 192
+    Top = 64
+  end
+end

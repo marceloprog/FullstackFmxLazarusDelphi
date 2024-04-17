@@ -1,0 +1,768 @@
+object FrmPrincipal: TFrmPrincipal
+  Left = 0
+  Top = 0
+  Caption = 'Reserva de Livros'
+  ClientHeight = 500
+  ClientWidth = 480
+  Position = ScreenCenter
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  OnShow = FormShow
+  DesignerMasterStyle = 0
+  object retHeader: TRectangle
+    Align = Top
+    Fill.Color = xFF667089
+    Size.Width = 480.000000000000000000
+    Size.Height = 48.000000000000000000
+    Size.PlatformDefault = False
+    Stroke.Kind = None
+    object lblHeader: TLabel
+      Align = Client
+      StyledSettings = [Family, Style]
+      Size.Width = 480.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Size = 22.000000000000000000
+      TextSettings.FontColor = claWhite
+      TextSettings.HorzAlign = Center
+      Text = 'Loja de Livros'
+      TabOrder = 0
+    end
+  end
+  object TbControl: TTabControl
+    Align = Client
+    Size.Width = 480.000000000000000000
+    Size.Height = 452.000000000000000000
+    Size.PlatformDefault = False
+    TabIndex = 2
+    TabOrder = 2
+    TabPosition = None
+    Sizes = (
+      480s
+      452s
+      480s
+      452s
+      480s
+      452s
+      480s
+      452s
+      480s
+      452s
+      480s
+      452s
+      480s
+      452s)
+    object TabMenu: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = False
+      Size.Width = 8.000000000000000000
+      Size.Height = 8.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'TabMenu'
+      ExplicitSize.cx = 8.000000000000000000
+      ExplicitSize.cy = 8.000000000000000000
+      object retMenu: TRectangle
+        Align = Client
+        Fill.Color = xFFEFF1F8
+        Size.Width = 480.000000000000000000
+        Size.Height = 452.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Kind = None
+        object lytBtnListarLIvros: TLayout
+          Align = Top
+          ClipChildren = True
+          Margins.Left = 20.000000000000000000
+          Margins.Top = 70.000000000000000000
+          Margins.Right = 20.000000000000000000
+          Position.X = 20.000000000000000000
+          Position.Y = 70.000000000000000000
+          Size.Width = 440.000000000000000000
+          Size.Height = 50.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          object recBtnListarLivros: TRectangle
+            Align = Client
+            ClipChildren = True
+            Fill.Color = xFFD8A8A8
+            Size.Width = 440.000000000000000000
+            Size.Height = 50.000000000000000000
+            Size.PlatformDefault = False
+            XRadius = 25.000000000000000000
+            YRadius = 25.000000000000000000
+            object lblBtnListarLivros: TLabel
+              Align = Center
+              StyledSettings = [Family, Style]
+              Size.Width = 178.000000000000000000
+              Size.Height = 23.000000000000000000
+              Size.PlatformDefault = False
+              TextSettings.Font.Size = 18.000000000000000000
+              TextSettings.FontColor = claPurple
+              Text = 'Listar/Reservar Livros'
+              TabOrder = 0
+            end
+            object spBtnListarLivros: TSpeedButton
+              Align = Client
+              Size.Width = 440.000000000000000000
+              Size.Height = 50.000000000000000000
+              Size.PlatformDefault = False
+              OnClick = spBtnListarLivrosClick
+            end
+          end
+        end
+        object lytBtnCadastrarLivro: TLayout
+          Align = Top
+          ClipChildren = True
+          Margins.Left = 20.000000000000000000
+          Margins.Top = 50.000000000000000000
+          Margins.Right = 20.000000000000000000
+          Position.X = 20.000000000000000000
+          Position.Y = 270.000000000000000000
+          Size.Width = 440.000000000000000000
+          Size.Height = 50.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 1
+          object recBtnCadastrarLivro: TRectangle
+            Align = Client
+            ClipChildren = True
+            Fill.Color = xFFD8A8A8
+            Size.Width = 440.000000000000000000
+            Size.Height = 50.000000000000000000
+            Size.PlatformDefault = False
+            XRadius = 25.000000000000000000
+            YRadius = 25.000000000000000000
+            object lblBtnCadastrarLivro: TLabel
+              Align = Center
+              StyledSettings = [Family, Style]
+              Size.Width = 167.000000000000000000
+              Size.Height = 23.000000000000000000
+              Size.PlatformDefault = False
+              TextSettings.Font.Size = 18.000000000000000000
+              TextSettings.FontColor = claPurple
+              Text = 'Cadastrar Livros'
+              TabOrder = 0
+            end
+            object spBtnCadastrarLivro: TSpeedButton
+              Align = Client
+              Size.Width = 440.000000000000000000
+              Size.Height = 50.000000000000000000
+              Size.PlatformDefault = False
+              OnClick = spBtnCadastrarLivroClick
+            end
+          end
+        end
+        object lytBtnListarReservas: TLayout
+          Align = Top
+          ClipChildren = True
+          Margins.Left = 20.000000000000000000
+          Margins.Top = 50.000000000000000000
+          Margins.Right = 20.000000000000000000
+          Position.X = 20.000000000000000000
+          Position.Y = 170.000000000000000000
+          Size.Width = 440.000000000000000000
+          Size.Height = 50.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 2
+          object recBtnListarReservas: TRectangle
+            Align = Client
+            ClipChildren = True
+            Fill.Color = xFFD8A8A8
+            Size.Width = 440.000000000000000000
+            Size.Height = 50.000000000000000000
+            Size.PlatformDefault = False
+            XRadius = 25.000000000000000000
+            YRadius = 25.000000000000000000
+            object lblBtnListarReservas: TLabel
+              Align = Center
+              StyledSettings = [Family, Style]
+              Size.Width = 178.000000000000000000
+              Size.Height = 23.000000000000000000
+              Size.PlatformDefault = False
+              TextSettings.Font.Size = 18.000000000000000000
+              TextSettings.FontColor = claPurple
+              Text = 'Listar Reservas'
+              TabOrder = 0
+            end
+            object spBtnListarReservas: TSpeedButton
+              Align = Client
+              Size.Width = 440.000000000000000000
+              Size.Height = 50.000000000000000000
+              Size.PlatformDefault = False
+              OnClick = spBtnListarReservasClick
+            end
+          end
+        end
+      end
+    end
+    object TabLivros: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = False
+      Size.Width = 8.000000000000000000
+      Size.Height = 8.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'TabLivros'
+      ExplicitSize.cx = 8.000000000000000000
+      ExplicitSize.cy = 8.000000000000000000
+      object retPesquisar: TRectangle
+        Align = Top
+        Fill.Color = xFFEFF1F8
+        Size.Width = 480.000000000000000000
+        Size.Height = 48.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Kind = None
+        object edtPesquisar: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          Align = Center
+          TabOrder = 0
+          TextSettings.Font.Size = 16.000000000000000000
+          Size.Width = 345.000000000000000000
+          Size.Height = 30.000000000000000000
+          Size.PlatformDefault = False
+          TextPrompt = 'Pesquisar'
+          StyledSettings = [Family, Style, FontColor]
+        end
+        object btnPesquisar: TSpeedButton
+          Align = Right
+          Padding.Left = 5.000000000000000000
+          Padding.Top = 5.000000000000000000
+          Padding.Right = 5.000000000000000000
+          Padding.Bottom = 5.000000000000000000
+          Margins.Left = 5.000000000000000000
+          Margins.Top = 5.000000000000000000
+          Margins.Right = 5.000000000000000000
+          Margins.Bottom = 5.000000000000000000
+          Position.X = 427.000000000000000000
+          Position.Y = 5.000000000000000000
+          Size.Width = 48.000000000000000000
+          Size.Height = 38.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'searchtoolbuttonbordered'
+          OnClick = btnPesquisarClick
+        end
+      end
+      object retReservar: TRectangle
+        Align = Bottom
+        Fill.Color = xFFEFF1F8
+        Position.Y = 404.000000000000000000
+        Size.Width = 480.000000000000000000
+        Size.Height = 48.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Kind = None
+        object btnReservar: TButton
+          StyledSettings = [Family, Style, FontColor]
+          Position.X = 334.000000000000000000
+          Position.Y = 7.000000000000000000
+          Size.Width = 106.000000000000000000
+          Size.Height = 33.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'buttonstyle'
+          TabOrder = 0
+          Text = 'Reservar'
+          TextSettings.Font.Size = 16.000000000000000000
+          OnClick = btnReservarClick
+        end
+        object btnVoltarReservar: TButton
+          StyledSettings = [Family, Style, FontColor]
+          Position.X = 34.000000000000000000
+          Position.Y = 7.000000000000000000
+          Size.Width = 106.000000000000000000
+          Size.Height = 33.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'buttonstyle'
+          TabOrder = 1
+          Text = 'Voltar'
+          TextSettings.Font.Size = 16.000000000000000000
+          OnClick = btnVoltarReservarClick
+        end
+      end
+      object vsbLivros: TVertScrollBox
+        Align = Client
+        Size.Width = 480.000000000000000000
+        Size.Height = 356.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 2
+        Viewport.Width = 480.000000000000000000
+        Viewport.Height = 356.000000000000000000
+      end
+    end
+    object TabLivro: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = True
+      Size.Width = 8.000000000000000000
+      Size.Height = 8.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'TabLivro'
+      ExplicitSize.cx = 8.000000000000000000
+      ExplicitSize.cy = 8.000000000000000000
+      object retVotarLIvro: TRectangle
+        Align = Bottom
+        Fill.Color = xFFEFF1F8
+        Position.Y = 404.000000000000000000
+        Size.Width = 480.000000000000000000
+        Size.Height = 48.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Kind = None
+        object btnVoltarLIvro: TButton
+          Align = Center
+          StyledSettings = [Family, Style, FontColor]
+          Size.Width = 106.000000000000000000
+          Size.Height = 33.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'buttonstyle'
+          TabOrder = 0
+          Text = 'Voltar'
+          TextSettings.Font.Size = 16.000000000000000000
+          OnClick = btnVoltarLIvroClick
+        end
+      end
+      object ScrollLIvro: TScrollBox
+        Align = Client
+        Size.Width = 480.000000000000000000
+        Size.Height = 404.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        Viewport.Width = 480.000000000000000000
+        Viewport.Height = 404.000000000000000000
+        object lblAutor: TLabel
+          Align = Top
+          StyledSettings = [Family, Style, FontColor]
+          Margins.Left = 5.000000000000000000
+          Margins.Top = 2.000000000000000000
+          Margins.Right = 5.000000000000000000
+          Margins.Bottom = 5.000000000000000000
+          Position.X = 5.000000000000000000
+          Position.Y = 2.000000000000000000
+          Size.Width = 470.000000000000000000
+          Size.Height = 17.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Size = 16.000000000000000000
+          Text = 'Autor'
+          TabOrder = 0
+        end
+        object lblDescricao: TLabel
+          Align = Top
+          AutoSize = True
+          StyledSettings = [Family, Style, FontColor]
+          Margins.Left = 5.000000000000000000
+          Margins.Top = 2.000000000000000000
+          Margins.Right = 5.000000000000000000
+          Margins.Bottom = 5.000000000000000000
+          Position.X = 5.000000000000000000
+          Position.Y = 50.000000000000000000
+          Size.Width = 470.000000000000000000
+          Size.Height = 22.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Size = 16.000000000000000000
+          Text = 'Descri'#231#227'o'
+          TabOrder = 1
+        end
+        object lblTitulo: TLabel
+          Align = Top
+          StyledSettings = [Family, FontColor]
+          Margins.Left = 5.000000000000000000
+          Margins.Top = 2.000000000000000000
+          Margins.Right = 5.000000000000000000
+          Margins.Bottom = 5.000000000000000000
+          Position.X = 5.000000000000000000
+          Position.Y = 26.000000000000000000
+          Size.Width = 470.000000000000000000
+          Size.Height = 17.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Size = 16.000000000000000000
+          TextSettings.Font.StyleExt = {00070000000000000004000000}
+          Text = 'T'#236'tulo'
+          TabOrder = 2
+        end
+      end
+    end
+    object TabReserva: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = False
+      Size.Width = 8.000000000000000000
+      Size.Height = 8.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'TabReserva'
+      ExplicitSize.cx = 8.000000000000000000
+      ExplicitSize.cy = 8.000000000000000000
+      object retContentReserva: TRectangle
+        Align = Top
+        Fill.Color = xFFEFF1F8
+        Size.Width = 480.000000000000000000
+        Size.Height = 168.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Kind = None
+        object edtNome: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          Align = Top
+          TabOrder = 0
+          TextSettings.Font.Size = 16.000000000000000000
+          Position.X = 10.000000000000000000
+          Position.Y = 10.000000000000000000
+          Margins.Left = 10.000000000000000000
+          Margins.Top = 10.000000000000000000
+          Margins.Right = 10.000000000000000000
+          Size.Width = 460.000000000000000000
+          Size.Height = 30.000000000000000000
+          Size.PlatformDefault = False
+          TextPrompt = 'Nome'
+          StyledSettings = [Family, Style, FontColor]
+          CharCase = ecUpperCase
+        end
+        object edtCpf: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          Align = Top
+          TabOrder = 1
+          KeyboardType = NumberPad
+          TextSettings.Font.Size = 16.000000000000000000
+          Position.X = 10.000000000000000000
+          Position.Y = 50.000000000000000000
+          Margins.Left = 10.000000000000000000
+          Margins.Top = 10.000000000000000000
+          Margins.Right = 10.000000000000000000
+          Size.Width = 460.000000000000000000
+          Size.Height = 30.000000000000000000
+          Size.PlatformDefault = False
+          TextPrompt = 'Cpf'
+          StyledSettings = [Family, Style, FontColor]
+          OnTyping = edtCpfTyping
+        end
+        object edtTelefone: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          Align = Top
+          TabOrder = 2
+          KeyboardType = NumberPad
+          TextSettings.Font.Size = 16.000000000000000000
+          Position.X = 10.000000000000000000
+          Position.Y = 90.000000000000000000
+          Margins.Left = 10.000000000000000000
+          Margins.Top = 10.000000000000000000
+          Margins.Right = 10.000000000000000000
+          Size.Width = 460.000000000000000000
+          Size.Height = 30.000000000000000000
+          Size.PlatformDefault = False
+          TextPrompt = 'Telefone'
+          StyledSettings = [Family, Style, FontColor]
+          OnTyping = edtTelefoneTyping
+        end
+        object edtEmail: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          Align = Top
+          TabOrder = 3
+          KeyboardType = EmailAddress
+          TextSettings.Font.Size = 16.000000000000000000
+          Position.X = 10.000000000000000000
+          Position.Y = 130.000000000000000000
+          Margins.Left = 10.000000000000000000
+          Margins.Top = 10.000000000000000000
+          Margins.Right = 10.000000000000000000
+          Size.Width = 460.000000000000000000
+          Size.Height = 30.000000000000000000
+          Size.PlatformDefault = False
+          TextPrompt = 'Email'
+          StyledSettings = [Family, Style, FontColor]
+          CharCase = ecLowerCase
+        end
+      end
+      object retFooterReserva: TRectangle
+        Align = Bottom
+        Fill.Color = xFFEFF1F8
+        Position.Y = 404.000000000000000000
+        Size.Width = 480.000000000000000000
+        Size.Height = 48.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Kind = None
+        object btnConfirmarReserva: TButton
+          StyledSettings = [Family, Style, FontColor]
+          Position.X = 337.000000000000000000
+          Position.Y = 7.000000000000000000
+          Size.Width = 106.000000000000000000
+          Size.Height = 33.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'buttonstyle'
+          TabOrder = 0
+          Text = 'Confirmar'
+          TextSettings.Font.Size = 16.000000000000000000
+          OnClick = btnConfirmarReservaClick
+        end
+        object btnCancelarReserva: TButton
+          StyledSettings = [Family, Style, FontColor]
+          Position.X = 50.000000000000000000
+          Position.Y = 7.000000000000000000
+          Size.Width = 106.000000000000000000
+          Size.Height = 33.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'buttonstyle'
+          TabOrder = 1
+          Text = 'Cancelar'
+          TextSettings.Font.Size = 16.000000000000000000
+          OnClick = btnVoltarLIvroClick
+        end
+      end
+      object vsbLivrosSelecionados: TVertScrollBox
+        Align = Client
+        Size.Width = 480.000000000000000000
+        Size.Height = 236.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        Viewport.Width = 480.000000000000000000
+        Viewport.Height = 236.000000000000000000
+      end
+    end
+    object TabEnviar: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = False
+      Size.Width = 8.000000000000000000
+      Size.Height = 8.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'TabEnviar'
+      ExplicitSize.cx = 8.000000000000000000
+      ExplicitSize.cy = 8.000000000000000000
+      object retEnviar: TRectangle
+        Align = Bottom
+        Fill.Color = xFFEFF1F8
+        Position.Y = 404.000000000000000000
+        Size.Width = 480.000000000000000000
+        Size.Height = 48.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Kind = None
+        object btnVoltarEnvio: TButton
+          Align = Center
+          StyledSettings = [Family, Style, FontColor]
+          Size.Width = 106.000000000000000000
+          Size.Height = 33.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'buttonstyle'
+          TabOrder = 0
+          Text = 'Voltar'
+          TextSettings.Font.Size = 16.000000000000000000
+          OnClick = btnVoltarEnvioClick
+        end
+      end
+      object listEnviar: TListBox
+        Align = Client
+        Margins.Left = 5.000000000000000000
+        Margins.Top = 5.000000000000000000
+        Margins.Right = 5.000000000000000000
+        Margins.Bottom = 5.000000000000000000
+        Size.Width = 470.000000000000000000
+        Size.Height = 394.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        DisableFocusEffect = True
+        DefaultItemStyles.ItemStyle = ''
+        DefaultItemStyles.GroupHeaderStyle = ''
+        DefaultItemStyles.GroupFooterStyle = ''
+        Viewport.Width = 466.000000000000000000
+        Viewport.Height = 390.000000000000000000
+      end
+    end
+    object TabCadastro: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = False
+      Size.Width = 8.000000000000000000
+      Size.Height = 8.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'TabCadastro'
+      ExplicitSize.cx = 8.000000000000000000
+      ExplicitSize.cy = 8.000000000000000000
+      object retCadastrar: TRectangle
+        Align = Bottom
+        Fill.Color = xFFEFF1F8
+        Position.Y = 404.000000000000000000
+        Size.Width = 480.000000000000000000
+        Size.Height = 48.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Kind = None
+        object btnCadastrarLivro: TButton
+          StyledSettings = [Family, Style, FontColor]
+          Position.X = 334.000000000000000000
+          Position.Y = 7.000000000000000000
+          Size.Width = 106.000000000000000000
+          Size.Height = 33.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'buttonstyle'
+          TabOrder = 0
+          Text = 'Cadastrar'
+          TextSettings.Font.Size = 16.000000000000000000
+          OnClick = btnCadastrarLivroClick
+        end
+        object btnVoltarCadastroLivro: TButton
+          StyledSettings = [Family, Style, FontColor]
+          Position.X = 34.000000000000000000
+          Position.Y = 7.000000000000000000
+          Size.Width = 106.000000000000000000
+          Size.Height = 33.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'buttonstyle'
+          TabOrder = 1
+          Text = 'Voltar'
+          TextSettings.Font.Size = 16.000000000000000000
+          OnClick = btnVoltarCadastroLivroClick
+        end
+      end
+      object retCadastroLivro: TRectangle
+        Align = Top
+        Fill.Color = xFFEFF1F8
+        Margins.Top = 100.000000000000000000
+        Position.Y = 100.000000000000000000
+        Size.Width = 480.000000000000000000
+        Size.Height = 205.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Kind = None
+        object edtNomeLivro: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          Align = Top
+          TabOrder = 0
+          MaxLength = 250
+          TextSettings.Font.Size = 16.000000000000000000
+          Position.X = 10.000000000000000000
+          Position.Y = 40.000000000000000000
+          Margins.Left = 10.000000000000000000
+          Margins.Top = 40.000000000000000000
+          Margins.Right = 10.000000000000000000
+          Size.Width = 460.000000000000000000
+          Size.Height = 30.000000000000000000
+          Size.PlatformDefault = False
+          TextPrompt = 'Nome do Livro'
+          StyledSettings = [Family, Style, FontColor]
+          CharCase = ecUpperCase
+        end
+        object edtAutorLivro: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          Align = Top
+          TabOrder = 1
+          MaxLength = 250
+          TextSettings.Font.Size = 16.000000000000000000
+          Position.X = 10.000000000000000000
+          Position.Y = 80.000000000000000000
+          Margins.Left = 10.000000000000000000
+          Margins.Top = 10.000000000000000000
+          Margins.Right = 10.000000000000000000
+          Size.Width = 460.000000000000000000
+          Size.Height = 30.000000000000000000
+          Size.PlatformDefault = False
+          TextPrompt = 'Autor'
+          StyledSettings = [Family, Style, FontColor]
+          OnTyping = edtCpfTyping
+        end
+        object edtDescricaoLivro: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          Align = Top
+          TabOrder = 2
+          MaxLength = 2000
+          TextSettings.Font.Size = 16.000000000000000000
+          Position.X = 10.000000000000000000
+          Position.Y = 120.000000000000000000
+          Margins.Left = 10.000000000000000000
+          Margins.Top = 10.000000000000000000
+          Margins.Right = 10.000000000000000000
+          Size.Width = 460.000000000000000000
+          Size.Height = 30.000000000000000000
+          Size.PlatformDefault = False
+          TextPrompt = 'Descri'#231#227'o'
+          StyledSettings = [Family, Style, FontColor]
+          OnTyping = edtTelefoneTyping
+        end
+        object chkStatusLivro: TCheckBox
+          Align = Top
+          StyledSettings = [Family, Style, FontColor]
+          Margins.Left = 10.000000000000000000
+          Margins.Top = 10.000000000000000000
+          Margins.Right = 10.000000000000000000
+          Position.X = 10.000000000000000000
+          Position.Y = 160.000000000000000000
+          Size.Width = 460.000000000000000000
+          Size.Height = 19.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 3
+          Text = 'Inativo'
+          TextSettings.Font.Size = 16.000000000000000000
+        end
+      end
+    end
+    object TabListReserva: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = False
+      Size.Width = 8.000000000000000000
+      Size.Height = 8.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'TabListReserva'
+      ExplicitSize.cx = 8.000000000000000000
+      ExplicitSize.cy = 8.000000000000000000
+      object Rectangle2: TRectangle
+        Align = Bottom
+        Fill.Color = xFFEFF1F8
+        Position.Y = 404.000000000000000000
+        Size.Width = 480.000000000000000000
+        Size.Height = 48.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Kind = None
+        object btnVoltarListarReserva: TButton
+          StyledSettings = [Family, Style, FontColor]
+          Position.X = 34.000000000000000000
+          Position.Y = 7.000000000000000000
+          Size.Width = 106.000000000000000000
+          Size.Height = 33.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'buttonstyle'
+          TabOrder = 1
+          Text = 'Voltar'
+          TextSettings.Font.Size = 16.000000000000000000
+          OnClick = btnVoltarListarReservaClick
+        end
+        object btnListarReservas: TButton
+          StyledSettings = [Family, Style, FontColor]
+          Position.X = 334.000000000000000000
+          Position.Y = 7.000000000000000000
+          Size.Width = 106.000000000000000000
+          Size.Height = 33.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'buttonstyle'
+          TabOrder = 0
+          Text = 'Listar'
+          TextSettings.Font.Size = 16.000000000000000000
+          OnClick = btnListarReservasClick
+        end
+      end
+      object vsbListaReservas: TVertScrollBox
+        Align = Client
+        Size.Width = 480.000000000000000000
+        Size.Height = 404.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 2
+        Viewport.Width = 480.000000000000000000
+        Viewport.Height = 404.000000000000000000
+      end
+    end
+  end
+end

@@ -1,6 +1,3 @@
-# FullstackFmxLazarusDelphi
-Api desenvolvida e Lazarus e Delphi com Aplicativo de consumo para Firemonkey
-
 
 API Horse com firebird em 2 versões
 Rad Studio 10.2 Tokio

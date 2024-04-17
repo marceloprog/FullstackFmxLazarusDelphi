@@ -1,0 +1,80 @@
+inherited BookService: TBookService
+  OldCreateOrder = True
+  Height = 199
+  HorizontalOffset = 520
+  VerticalOffset = 119
+  Width = 228
+  object qryBooks: TZQuery[1]
+    Connection = ZConnection
+    SQL.Strings = (
+      'select id,nome,descricao,autor ,status '
+      'from livro'
+    )
+    Params = <>
+    Left = 75
+    Top = 25
+    object qryBooksID: TLongintField
+      FieldKind = fkData
+      FieldName = 'ID'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      ReadOnly = True
+      Required = False
+    end
+    object qryBooksNOME: TStringField
+      FieldKind = fkData
+      FieldName = 'NOME'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 250
+    end
+    object qryBooksDESCRICAO: TStringField
+      FieldKind = fkData
+      FieldName = 'DESCRICAO'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 2000
+    end
+    object qryBooksAUTOR: TStringField
+      FieldKind = fkData
+      FieldName = 'AUTOR'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 250
+    end
+    object qryBooksSTATUS: TSmallintField
+      FieldKind = fkData
+      FieldName = 'STATUS'
+      Index = 4
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+  end
+  object qryUpdate: TZQuery[2]
+    Connection = ZConnection
+    Params = <>
+    Left = 19
+    Top = 79
+  end
+  object qryID: TZQuery[3]
+    Connection = ZConnection
+    SQL.Strings = (
+      'select max(id) as ultimoid from livro'
+    )
+    Params = <>
+    Left = 136
+    Top = 32
+  end
+end
